@@ -1,0 +1,10 @@
+<h1>Homepage</h1>
+
+Upload a file here!
+<form action='/upload' method="POST" enctype="multipart/form-data"> 
+{{!-- so the action '/upload' must be the same --}}
+<input type='file' name='image' /> 
+{{!-- and the name must match too --}}
+<input type='submit' value='Upload a file'/>
+
+ </form>
