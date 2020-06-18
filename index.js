@@ -33,6 +33,11 @@ app.get('/', (req, res) => {
 res.render('index')
 })
 
+app.get('/images', (req, res) => {
+    let names = fs.readdirSync(__dirname + '/uploads');
+    res.render('images', {names});
+    })
+
 app.post('/upload', upload.single('image'), (req, res) => { 
     //the single file name ('image') and path ('/upload') must match the ones on the form
     let uploadedfile = req.file.fieldname
